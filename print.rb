@@ -17,8 +17,8 @@ end
 
 
 # prints the table to the screen
- #Table of Hero choices and their attack and defense stats
  def add_table
+    #Table of Hero choices and their attack and defense stats
     table = Terminal::Table.new do |t|
         t.headings = ['Hero', 'Attack', 'Defense']
         t << :separator
@@ -35,9 +35,9 @@ end
     puts table
 end
 
-add_table()
 
 
+#
 def choose_army
     prompt = TTY::Prompt.new
     pastel = Pastel.new
