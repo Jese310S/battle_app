@@ -29,3 +29,5 @@ gem 'tty-prompt'
 gem 'tty-cursor', "~> 0.3.0"
 
 gem 'lolcat', '~> 99.9', '>= 99.9.20'
+
+gem 'tty-table'
