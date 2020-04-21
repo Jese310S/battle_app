@@ -1,6 +1,7 @@
 require "tty-prompt"
 require "tty-font"
 require "pastel"
+require "terminal-table"
 
 font = TTY::Font.new(:doom)
 pastel = Pastel.new
@@ -14,8 +15,28 @@ def game_logo
     puts pastel.yellow(font.write("BATTLE  WARS"))
 end
 
-def army_table
+
+# prints the table to the screen
+ #Table of Hero choices and their attack and defense stats
+ def add_table
+    table = Terminal::Table.new do |t|
+        t.headings = ['Hero', 'Attack', 'Defense']
+        t << :separator
+        t.add_row ['Wizard', '20', '5'] 
+        t.add_separator
+        t.add_row ['Barbarian', '15', '10']
+        t.add_separator
+        t.add_row ['Giant', '20', '5']
+        t.add_separator
+        t.add_row ['Archer', '10','10']
+        t.add_separator
+        t.add_row ['Demon Hunter', '30', '10']
+    end
+    puts table
 end
+
+add_table()
+
 
 def choose_army
     prompt = TTY::Prompt.new
@@ -26,4 +47,4 @@ def choose_army
 
 end
 
-choose_army()
+# choose_army()
