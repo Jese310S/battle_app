@@ -5,4 +5,10 @@ require 'pastel'
 prompt = TTY::Prompt.new
 pastel = Pastel.new
 
-puts ""
+class Army
+    attr_accessor :army
+    def initialize 
+        @army = []
+    end
+
+end
