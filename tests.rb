@@ -1,5 +1,6 @@
 require 'rspec/autorun'
 require_relative './main'
+require_relative './player'
 
 describe Player do
     it "will create a new player object" do
