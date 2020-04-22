@@ -1,18 +1,16 @@
 require_relative './welcome'
+require_relative 'attack'
+require_relative 'dragon'
 
 
-class Player < Welcome
-    attr_accessor :player_name, :health, :money
+class Player < Attack
+    attr_accessor :name, :hp, :damage, :defense
 
-    def initialize
-        @player_name = []
-        @health = 100
-        @money = 100
-    end
-
-    #method to get player name from user
-    def name
-        @player_name[0]
+    def initialize(name)
+        @name = name
+        @hp = 100
+        @damage = 50
+        @defense = 20
     end
 
 
