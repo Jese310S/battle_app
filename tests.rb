@@ -3,6 +3,27 @@ require_relative './main'
 require_relative './player'
 require_relative './army'
 
+describe Welcome do
+    it "will initialize and create a welcome object" do
+        welcome = Welcome.new
+        check = welcome.is_a?(Welcome)
+        expect(check).to eq(true)
+        end
+
+
+    it "will ask user for username and store it" do
+        welcome = Welcome.new
+        welcome.ask_name
+        player_name = welcome.player_name
+        expect(player_name[0]).to eq("jess")
+    end
+
+end
+
+
+
+
+
 describe Player do
     it "will create a new player object" do
     player = Player.new
@@ -12,7 +33,7 @@ describe Player do
 
     it "will add given name to player_name" do
         player = Player.new
-        player.name()
+        player.ask_name()
         name = player.player_name[0]
         expect(name).to eq("jess")
     end
