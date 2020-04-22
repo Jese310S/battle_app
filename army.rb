@@ -12,6 +12,25 @@ class Army
     end
 
 
+    # prints the table to the screen
+    def add_table
+        #Table of Hero choices and their attack and defense stats
+        table = Terminal::Table.new do |t|
+            t.headings = ['Hero', 'Attack', 'Defense']
+            t << :separator
+            t.add_row ['Wizard', '20', '5'] 
+            t.add_separator
+            t.add_row ['Barbarian', '15', '10']
+            t.add_separator
+            t.add_row ['Giant', '20', '5']
+            t.add_separator
+            t.add_row ['Archer', '10','10']
+            t.add_separator
+            t.add_row ['Demon Hunter', '30', '10']
+        end
+        puts table
+    end
+    
     #method to print army choices to terminal and store in army variable
     def choose_army
         prompt = TTY::Prompt.new
