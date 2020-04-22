@@ -1,4 +1,7 @@
-class Player
+require_relative './welcome'
+
+
+class Player < Welcome
     attr_accessor :player_name, :health, :money
 
     def initialize
@@ -9,9 +12,7 @@ class Player
 
     #method to get player name from user
     def name
-        prompt = TTY::Prompt.new
-        username = prompt.ask('Enter a Username', required: true)
-        @player_name.push(username)
+        @player_name[0]
     end
 
 
