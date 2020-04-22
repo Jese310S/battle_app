@@ -32,10 +32,7 @@ def player_attack
     chosen_warrior = prompt.select("Choose your warrior to attack!", %w(Archer Giant Wizard Barbarian ))
     puts chosen_warrior
     dragon_hp = player.attacks(dragon)
-    puts dragon_hp
-    lost_health = dragon_hp/200
-    puts lost_health.to_f
-    puts 
+    lost_health = dragon_hp.to_f/200
     pastel = Pastel.new
     font = TTY::Font.new(:straight)
     puts pastel.on_green.bold(font.write("-------HIT-------"))
@@ -43,7 +40,7 @@ def player_attack
     30.times do
     sleep(0.1)
     bar.advance(lost_health)
-end
+    end
    #puts pastel.green.bold("Your #{chosen_warrior} hit Draco the Terrible. He has #{dragon.hp}hp left")
     return dragon.hp
 

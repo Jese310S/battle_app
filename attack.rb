@@ -26,17 +26,3 @@ class Attack < Army
 
 end
 
-# def player_attack
-#     dragon = Dragon.new
-#     player = Player.new("jess")
-#     prompt = TTY::Prompt.new
-#     chosen_warrior = prompt.select("Choose your warrior to attack!", %w(Archer Giant Wizard Barbarian ))
-#     dragon_hp = player.attacks(dragon)
-#     font = TTY::Font.new(:straight)
-#     pastel = Pastel.new
-#       puts pastel.purple(font.write("HIT"))
-#     puts pastel.green("Your #{chosen_warrior} hit Draco the Terrible. He has #{dragon_hp}hp left")
-
-# end
-
-# player_attack()
