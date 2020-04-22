@@ -1,7 +1,10 @@
 require 'rspec/autorun'
-require_relative './main'
-require_relative './player'
-require_relative './army'
+require_relative 'main'
+require_relative 'player'
+require_relative 'army'
+require_relative 'attack'
+require_relative 'dragon'
+require_relative 'welcome'
 
 describe Welcome do
     it "will initialize and create a welcome object" do
@@ -21,21 +24,11 @@ describe Welcome do
 end
 
 
-
-
-
 describe Player do
     it "will create a new player object" do
-    player = Player.new
+    player = Player.new("jess")
     class_check = player.is_a?(Player)
     expect(class_check).to eq(true)
-    end
-
-    it "will add given name to player_name" do
-        player = Player.new
-        player.ask_name()
-        name = player.player_name[0]
-        expect(name).to eq("jess")
     end
 
 end
@@ -61,7 +54,19 @@ describe Army do
         army_warriors = army.army_warriors
         expect(army_warriors[0]).to eq("Archer-attk:25-def:15")
     end
+
 end
+
+    describe Attack do
+       it "subtracts damage form hp" do
+        jess = Player.new("jess")
+        draco = Dragon.new
+        jess_turn = Attack.new(jess.name, jess.hp, jess.damage)
+        opponent_hp = jess_turn.attacks(draco)
+        expect(opponent_hp).to eq(150)
+       end      
+    end
+    
 
 
 
