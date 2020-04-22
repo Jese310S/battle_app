@@ -63,7 +63,7 @@ end
         draco = Dragon.new
         jess_turn = Attack.new(jess.name, jess.hp, jess.damage)
         opponent_hp = jess_turn.attacks(draco)
-        expect(opponent_hp).to eq(150)
+        expect(opponent_hp).to eq(draco.hp)
        end      
     end
     
