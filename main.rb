@@ -1,5 +1,9 @@
-require_relative 'print'
+require_relative 'welcome'
 
 
 
-game_logo()
+start_welcome()
+puts `clear`
+
+
+
