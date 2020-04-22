@@ -6,7 +6,7 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 # gem "rails"
 
- #gem "tty-box"
+#gem "tty-box"
 
 gem "colorize", "~> 0.8.1"
 
@@ -28,6 +28,6 @@ gem 'tty-prompt'
 
 gem 'tty-cursor', "~> 0.3.0"
 
-gem 'lolcat', '~> 99.9', '>= 99.9.20'
+gem 'rainbow', '~> 3.0'
 
 gem 'terminal-table'
