@@ -17,7 +17,7 @@ class Army
         prompt = TTY::Prompt.new
         pastel = Pastel.new
         choices = %w(Archer-attk:25-def:15 Barbarian-attk:10 Giant-attk:30 Wizard-attk:15)
-        army = prompt.multi_select("Choose Your Army. (Use ↑/↓ arrow keys, press Space to select and Enter to finish)", choices )
+        army = prompt.multi_select("Choose Your Army." , choices )
         return army
     end
 
@@ -30,3 +30,9 @@ class Army
 
 end
 
+def choose_army
+    army = Army.new
+    # army.choose_army()
+    chosen_army = army.choose_army
+    army.add_army(chosen_army)
+end
