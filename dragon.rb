@@ -9,9 +9,9 @@ require 'tty-prompt'
 class Dragon < Attack
     attr_accessor :hp, :damage, :name
 
-    def initialize(hp)
+    def initialize
         @name = "Draco"
-        @hp = hp
+        @hp = 100
         @damage = 20
     end
 
@@ -27,7 +27,7 @@ class Dragon < Attack
     #Table of Hero choices and their attack and defense stats
     table = Terminal::Table.new do |t|
         t.headings = ['Type','Dragon']
-        t.add_row ['HP', '200']
+        t.add_row ['HP', '100']
     end
     puts table
     end
@@ -38,7 +38,7 @@ end
 def boss_intro
     pastel = Pastel.new
     puts pastel.green("You have encountered")
-    dragon = Dragon.new(200)
+    dragon = Dragon.new
     dragon.display_name
     dragon.display_stats
     prompt = TTY::Prompt.new
