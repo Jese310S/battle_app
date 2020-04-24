@@ -79,8 +79,7 @@ end
         draco = Dragon.new(200)
         attack = Attack.new(jess.name, jess.hp, jess.damage)
 
-        
-    
+        expect(attack.lost_health(100)).to eq(0.5)
        end
     end
     
