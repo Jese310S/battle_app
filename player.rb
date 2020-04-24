@@ -7,20 +7,15 @@ require 'tty-progressbar'
 require 'tty-prompt'
 
 
-class Player
-    attr_accessor :name, :hp, :damage, :defense
+class Player < Attack
+    attr_accessor :name, :hp, :damage
 
     def initialize(name)
         @name = name
         @hp = 100
         @damage = 50
-        @defense = 20
     end
 
-    def attacks(opponent)
-        opponent.hp -= rand(@damage)
-        return opponent.hp
-    end
 
 end
 
@@ -46,4 +41,4 @@ def player_attack
 
 end
 
-player_attack()
+# player_attack()

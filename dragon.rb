@@ -1,18 +1,18 @@
 require 'tty-font'
+require_relative './attack'
 require 'terminal-table'
 require 'pastel'
 require 'tty-prompt'
 
 
 
-class Dragon 
-    attr_accessor :hp, :damage, :name, :defense
+class Dragon < Attack
+    attr_accessor :hp, :damage, :name
 
     def initialize(hp)
         @name = "Draco"
         @hp = hp
         @damage = 20
-        @defense = 25
     end
 
     #prints stylised name to the terminal
@@ -31,6 +31,7 @@ class Dragon
     end
     puts table
     end
+
     
 end
 
@@ -45,4 +46,4 @@ def boss_intro
 
 end
 
-boss_intro()
+
