@@ -69,11 +69,19 @@ end
        it "calculates the hit" do
         jess = Player.new("jess")
         draco = Dragon.new(200)
-        srand(2)
-        allow(attacks(draco)).to recieve(:hit_or_miss)
-        expect(attack.hit_or_miss).to eq("hit")
-
+        attack = Attack.new(jess.name, jess.hp, jess.damage)
+        
+        expect(attack.hit_or_miss).to eq("hit" || "miss")
        end 
+
+       it "will return a float " do
+        jess = Player.new("jess")
+        draco = Dragon.new(200)
+        attack = Attack.new(jess.name, jess.hp, jess.damage)
+
+        
+    
+       end
     end
     
 
