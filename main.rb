@@ -43,7 +43,7 @@ def start_game
 
             puts `clear`
         if player.wins(dragon)
-            puts " Congratulations! #{warrior_arr[0]}"
+            puts " Congratulations!"
         else
             puts " You Lose!"
         end
