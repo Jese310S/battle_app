@@ -8,19 +8,30 @@ require 'tty-font'
 require 'pastel'
 
 
-class Attack < Army
-    attr_accessor :name, :hp, :damage, :defense
+class Attack
+    attr_accessor :name, :hp, :damage
 
-    def initialize(name,hp,damage)
+    def initialize(name,hp,damage, defense)
         @name = name
         @hp = hp
         @damage = damage
-        @defense = defense
+    end
+
+    def hit_or_miss
+        hit = 0
+        miss = 1
+        result = rand(2)
+        result == 0 ? "hit" : "miss"
     end
 
     def attacks(opponent)
-        opponent.hp -= rand(@damage)
-        return opponent.hp
+        remaining_hp = opponent.hp -= rand(@damage)
+        return remaining_hp
+    end
+
+    def lost_health(remaining_hp)
+        lost_health = remaining_hp.to_f/200
+        return lost_health
     end
 
 
