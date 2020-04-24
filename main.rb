@@ -22,19 +22,33 @@ def start_game
     boss_intro()
     puts `clear`
 
-    dragon = Dragon.new(200)
+    dragon = Dragon.new
     player = Player.new("jess")
-    attack = Attack.new(player.name, player.hp, player.damage)
+    attack = Attack.new(player, player.hp, dragon.hp, player.damage)
     prompt = TTY::Prompt.new
-    puts attack.hit_or_miss
+    # puts attack.hit_or_miss
+    # puts attack.opponent_hp
 
-    attacking_warrior = prompt.select(" #{name[0]}, Choose your warrior to attack!", %w( #{chosen_warriors} ))
-    # attack_result = attack.hit_or_miss
+    # attacking_warrior = prompt.select(" #{name[0]}, Choose your warrior to attack!", %w( #{chosen_warriors} ))
+    # # attack_result = attack.hit_or_miss
+        x=0
+        until player.wins(dragon) || dragon.wins(player) do
+             if x.even?
+                player.attacks(dragon, attack.hit_or_miss, player.damage)
+             else
+                dragon.attacks(player, attack.hit_or_miss, dragon.damage)
+             end
+             x += 1
+        end
 
+            puts `clear`
+        if player.wins(dragon)
+            puts " Congratulations! #{warrior_arr[0]}"
+        else
+            puts " You Lose!"
+        end
 
-        player.attacks(dragon, attack.hit_or_miss)
-   #puts pastel.green.bold("Your #{chosen_warrior} hit Draco the Terrible. He has #{dragon.hp}hp left")
-
+  
 
 end
 
