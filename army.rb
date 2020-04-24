@@ -16,17 +16,17 @@ class Army
     def add_table
         #Table of Hero choices and their attack and defense stats
         table = Terminal::Table.new do |t|
-            t.headings = ['Hero', 'Attack', 'Defense']
+            t.headings = ['Hero']
             t << :separator
-            t.add_row ['Wizard', '20', '5'] 
+            t.add_row ['Wizard'] 
             t.add_separator
-            t.add_row ['Barbarian', '15', '10']
+            t.add_row ['Barbarian']
             t.add_separator
-            t.add_row ['Giant', '20', '5']
+            t.add_row ['Giant']
             t.add_separator
-            t.add_row ['Archer', '10','10']
+            t.add_row ['Archer']
             t.add_separator
-            t.add_row ['Demon Hunter', '30', '10']
+            t.add_row ['Demon Hunter']
         end
         puts table
     end
@@ -35,7 +35,7 @@ class Army
     def choose_army
         prompt = TTY::Prompt.new
         pastel = Pastel.new
-        choices = %w(Archer-attk:25-def:15 Barbarian-attk:10 Giant-attk:30 Wizard-attk:15)
+        choices = %w(Archer Barbarian Giant Wizard)
         army = prompt.multi_select("Choose Your Army." , choices )
         return army
     end
