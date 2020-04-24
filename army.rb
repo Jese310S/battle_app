@@ -30,7 +30,7 @@ class Army
         end
         puts table
     end
-    
+
     #method to print army choices to terminal and store in army variable
     def choose_army
         prompt = TTY::Prompt.new
@@ -54,4 +54,5 @@ def choose_army
     # army.choose_army()
     chosen_army = army.choose_army
     army.add_army(chosen_army)
+    return army.army_warriors
 end
