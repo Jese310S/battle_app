@@ -60,11 +60,20 @@ end
     describe Attack do
        it "subtracts damage form hp" do
         jess = Player.new("jess")
-        draco = Dragon.new
+        draco = Dragon.new(200)
         jess_turn = Attack.new(jess.name, jess.hp, jess.damage)
         opponent_hp = jess_turn.attacks(draco)
         expect(opponent_hp).to eq(draco.hp)
        end      
+
+       it "calculates the hit" do
+        jess = Player.new("jess")
+        draco = Dragon.new(200)
+        srand(2)
+        allow(attacks(draco)).to recieve(:hit_or_miss)
+        expect(attack.hit_or_miss).to eq("hit")
+
+       end 
     end
     
 
