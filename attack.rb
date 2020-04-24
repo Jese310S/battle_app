@@ -11,7 +11,7 @@ require 'pastel'
 class Attack
     attr_accessor :name, :hp, :damage
 
-    def initialize(name,hp,damage, defense)
+    def initialize(name,hp,damage )
         @name = name
         @hp = hp
         @damage = damage
