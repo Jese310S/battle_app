@@ -1,5 +1,5 @@
 require 'rspec/autorun'
-require_relative 'main'
+# require_relative 'main'
 require_relative 'player'
 require_relative 'army'
 require_relative 'attack'
@@ -39,50 +39,39 @@ describe Army do
         class_check = army.is_a?(Army)
         expect(class_check).to eq(true)
     end
-    
-    it "will run a propmt and store the users choices in an array" do
+
+    it "will run a prompt and store the users choices in the champion instance variable" do
         army = Army.new
-        warriors = army.choose_army()
-        expect(warriors[0]).to eq("Archer-attk:25-def:15")
+        warriors = army.choose_champion()
+        expect(army.champion).to eq("Wizard")
     end
 
 
     it "will add the chosen army to the army_warriors array" do
-        army = Army.new
-        warriors = army.choose_army()
-        army.add_army(warriors)
-        army_warriors = army.army_warriors
-        expect(army_warriors[0]).to eq("Archer-attk:25-def:15")
+        player = Player.new("jess")
+
+        expect(player.choose_champion).to eq("Wizard")
     end
 
 end
 
     describe Attack do
        it "subtracts damage form hp" do
-        jess = Player.new("jess")
-        draco = Dragon.new(200)
-        jess_turn = Attack.new(jess.name, jess.hp, jess.damage)
-        opponent_hp = jess_turn.attacks(draco)
-        expect(opponent_hp).to eq(draco.hp)
-       end      
-
-       it "calculates the hit" do
-        jess = Player.new("jess")
-        draco = Dragon.new(200)
-        attack = Attack.new(jess.name, jess.hp, jess.damage)
-        
-        expect(attack.hit_or_miss).to eq("hit" || "miss")
+        player = Player.new("jess")
+        draco = Boss.new("Draco")
+        result = "hit"
+        player.attacks(draco, result, player.damage)
+        new_hp = 100 - player.damage
+        expect(new_hp).to eq(draco.hp)
        end 
 
-       it "will return a float " do
-        jess = Player.new("jess")
-        draco = Dragon.new(200)
-        attack = Attack.new(jess.name, jess.hp, jess.damage)
 
-        expect(attack.lost_health(100)).to eq(0.5)
+
+       it "will return a float " do
+        player = Player.new("jess")
+        expect(player.lost_health(50  )).to eq(0.5)
        end
     end
-    
 
 
 
