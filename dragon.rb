@@ -12,7 +12,7 @@ class Dragon < Attack
     def initialize
         @name = "Draco"
         @hp = 100
-        @damage = 20
+        @damage = 50
     end
 
     #prints stylised name to the terminal
@@ -21,6 +21,18 @@ class Dragon < Attack
       font = TTY::Font.new(:doom)
       puts pastel.red(font.write("DRACO THE TERRIBLE"))
     end
+
+
+def boss_intro
+    pastel = Pastel.new
+    puts pastel.green("You have encountered")
+    dragon = Dragon.new
+    dragon.display_name
+    dragon.display_stats
+    prompt = TTY::Prompt.new
+      prompt.yes?('Ready for battle?')
+
+end
 
     # prints the table to the screen
    def display_stats
@@ -35,15 +47,15 @@ class Dragon < Attack
     
 end
 
-def boss_intro
-    pastel = Pastel.new
-    puts pastel.green("You have encountered")
-    dragon = Dragon.new
-    dragon.display_name
-    dragon.display_stats
-    prompt = TTY::Prompt.new
-      prompt.yes?('Ready for battle?')
+# def boss_intro
+#     pastel = Pastel.new
+#     puts pastel.green("You have encountered")
+#     dragon = Dragon.new
+#     dragon.display_name
+#     dragon.display_stats
+#     prompt = TTY::Prompt.new
+#       prompt.yes?('Ready for battle?')
 
-end
+# end
 
 
