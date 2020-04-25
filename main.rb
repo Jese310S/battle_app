@@ -13,19 +13,21 @@ require_relative 'player'
 # puts `clear`
 
 def start_game
-    name = start_welcome()
-    puts `clear`
-    warrior_arr = choose_army()
-    chosen_warriors = warrior_arr.each{ |x|  x }
-    print chosen_warriors
-    puts `clear`
-    boss_intro()
-    puts `clear`
-
     dragon = Dragon.new
     player = Player.new("jess")
     attack = Attack.new(player, player.hp, dragon.hp, player.damage)
     prompt = TTY::Prompt.new
+    pastel = Pastel.new
+    welcome = Welcome.new
+    welcome.ask_name
+    welcome.game_logo
+    name = welcome.player_name
+    puts welcome.display_message(name)
+    puts `clear`
+    player.choose_champion
+    puts `clear`
+    dragon.boss_intro
+    puts `clear`
     # puts attack.hit_or_miss
     # puts attack.opponent_hp
 
@@ -35,18 +37,20 @@ def start_game
         until player.wins(dragon) || dragon.wins(player) do
              if x.even?
                 player.attacks(dragon, attack.hit_or_miss, player.damage)
+                player.wins(dragon) ? sleep(2) :  (answer = prompt.yes? "You have #{player.hp}hp left, will you attack again?")
+                answer ? true : start_game()
+                puts `clear`
              else
                 dragon.attacks(player, attack.hit_or_miss, dragon.damage)
+                dragon.wins(player) ? sleep(2) : (answer = prompt.yes? "You have #{player.hp}hp left, will you attack again?")
+                answer ? true : start_game()
+                puts `clear`
              end
              x += 1
-        end
 
-            puts `clear`
-        if player.wins(dragon)
-            puts " Congratulations!"
-        else
-            puts " You Lose!"
         end
+          player.wins(dragon) ? (puts " Congratulations!, You Win.") : (puts " You Lose!")
+          (prompt.yes? "Would you like to play again?") ? start_game() : false
 
   
 
