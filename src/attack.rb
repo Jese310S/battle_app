@@ -26,6 +26,10 @@ class Attack < Army
         return result == 0 ? "hit" : "miss"
     end
 
+    def lost_health(opponent_hp)
+        lost_health = opponent_hp.to_f/100
+    end
+
 #main attack 
     def attacks(opponent, attack_result, attacker_damage)
         if attack_result == "hit"
