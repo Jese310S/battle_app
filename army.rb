@@ -6,9 +6,9 @@ prompt = TTY::Prompt.new
 pastel = Pastel.new
 
 class Army
-    attr_accessor :army_warriors
+    attr_accessor :champion
     def initialize 
-        @army_warriors = []
+        @champion = ""
     end
 
 
@@ -32,27 +32,18 @@ class Army
     end
 
     #method to print army choices to terminal and store in army variable
-    def choose_army
+    def choose_champion
         prompt = TTY::Prompt.new
         pastel = Pastel.new
         choices = %w(Archer Barbarian Giant Wizard)
-        army = prompt.multi_select("Choose Your Army." , choices )
-        return army
+        champion = prompt.select("Choose Your Champion!" , choices )
+        @champion = champion
     end
 
-    #method to add users chosen army to the army_warriors instance variable
-    def add_army(chosen_army)
-        chosen_army.each{ |warrior| 
-            @army_warriors.push(warrior)
-        }
-    end
 
 end
 
-def choose_army
-    army = Army.new
-    # army.choose_army()
-    chosen_army = army.choose_army
-    army.add_army(chosen_army)
-    return army.army_warriors
-end
+# army = Army.new
+# champion = army.choose_champion
+# puts champion
+# puts army.champion
