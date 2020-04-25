@@ -13,15 +13,15 @@ require_relative 'player'
 # puts `clear`
 
 def start_game
-    dragon = Dragon.new
-    player = Player.new("jess")
-    attack = Attack.new(player, player.hp, dragon.hp, player.damage)
-    prompt = TTY::Prompt.new
-    pastel = Pastel.new
     welcome = Welcome.new
     welcome.ask_name
     welcome.game_logo
     name = welcome.player_name
+    dragon = Dragon.new
+    player = Player.new(name[0])
+    # attack = Attack.new(player, player.hp, dragon.hp, player.damage)
+    prompt = TTY::Prompt.new
+    pastel = Pastel.new
     puts welcome.display_message(name)
     puts `clear`
     player.choose_champion
@@ -36,12 +36,12 @@ def start_game
         x=0
         until player.wins(dragon) || dragon.wins(player) do
              if x.even?
-                player.attacks(dragon, attack.hit_or_miss, player.damage)
-                player.wins(dragon) ? sleep(2) :  (answer = prompt.yes? "You have #{player.hp}hp left, will you attack again?")
+                player.attacks(dragon, player.hit_or_miss, player.damage)
+                player.wins(dragon) ? sleep(2) :  (answer = prompt.yes? "You have #{player.hp}hp left, ready for Draco's attack?")
                 answer ? true : start_game()
                 puts `clear`
              else
-                dragon.attacks(player, attack.hit_or_miss, dragon.damage)
+                dragon.attacks(player, dragon.hit_or_miss, dragon.damage)
                 dragon.wins(player) ? sleep(2) : (answer = prompt.yes? "You have #{player.hp}hp left, will you attack again?")
                 answer ? true : start_game()
                 puts `clear`

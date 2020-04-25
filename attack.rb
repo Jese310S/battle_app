@@ -6,7 +6,7 @@ require 'pastel'
 
 
 class Attack < Army
-    attr_accessor :attacker_name, :attacker_hp, :opponent_hp, :damage, :hit_phrases, :miss_phrases
+    # attr_accessor :attacker_name, :attacker_hp, :opponent_hp, :damage, :hit_phrases, :miss_phrases
 
     @@hit_phrases = [" is hit in the chest." , 
                     " could not dodge the attack and suffered damage", 
@@ -16,11 +16,12 @@ class Attack < Army
                         " quickly evaded the attack",
                         " deflected that attack, taking no damage"
                     ]
-    def initialize(attacker_name, attacker_hp, opponent_hp, damage )
-        @attacker_name = attacker_name
-        @attacker_hp = attacker_hp
-        @damage = damage
-        @opponent_hp = opponent_hp
+    def initialize
+        # (attacker_name, attacker_hp, opponent_hp, damage )
+        # @attacker_name = attacker_name
+        # @attacker_hp = attacker_hp
+        # @damage = damage
+        # @opponent_hp = opponent_hp
 
     end
 
