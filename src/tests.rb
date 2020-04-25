@@ -69,7 +69,7 @@ end
 
        it "will return a float " do
         player = Player.new("jess")
-        expect(player.lost_health(50  )).to eq(0.5)
+        expect(player.lost_health_test(50  )).to eq(0.5)
        end
     end
 
