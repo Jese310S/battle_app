@@ -30,7 +30,7 @@ class Army
         puts table
     end
 
-    #method to print army choices to terminal and store in army variable
+    #method to print champion choices to terminal and store in army variable
     def choose_champion
         prompt = TTY::Prompt.new
         pastel = Pastel.new

@@ -15,7 +15,7 @@ class Boss < Attack
         @damage = 50
     end
 
-    #prints stylised name to the terminal
+    #prints stylised name of boss to the terminal
     def display_name
       pastel = Pastel.new
       font = TTY::Font.new(:doom)
@@ -25,12 +25,12 @@ class Boss < Attack
 
     # prints the table to the screen
    def display_stats
-    #Table of Hero choices and their attack and defense stats
+    #Table of dragon stats
     table = Terminal::Table.new do |t|
         t.headings = ['Type','Dragon']
         t.add_row ['HP', '100']
     end
-    puts table
+    puts table #print table 
     end
 
     

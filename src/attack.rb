@@ -3,7 +3,7 @@ require 'tty-prompt'
 require 'tty-progressbar'
 require 'tty-font'
 require 'pastel'
-require 'rainbow'
+
 
 
 class Attack < Army
@@ -25,12 +25,12 @@ class Attack < Army
         result = rand(2)
         return result == 0 ? "hit" : "miss"
     end
-
+#method for rspec test that float is returned
     def lost_health_test(opponent_hp)
         lost_health = opponent_hp.to_f/100
     end
 
-#main attack 
+#main attack function, turn based attacks
     def attacks(opponent, attack_result, attacker_damage)
         if attack_result == "hit"
             pastel = Pastel.new
@@ -78,6 +78,7 @@ class Attack < Army
         opponent.hp <= 0 ? true : false
     end
 
+    #prints win screen to terminal
     def win_screen
         pastel = Pastel.new
         font = TTY::Font.new(:doom)
@@ -90,6 +91,7 @@ class Attack < Army
         print "\n"
     end
 
+    #prints lose screen to terminal
     def lose_screen
         pastel = Pastel.new
         font = TTY::Font.new(:doom)

@@ -6,7 +6,7 @@ require 'tty-font'
 require 'tty-progressbar'
 require 'tty-prompt'
 
-
+# player class which inherits from attack class
 class Player < Attack
     attr_accessor :name, :hp, :damage
 
