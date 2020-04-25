@@ -40,14 +40,14 @@ class Welcome
 end
 
 
-def start_welcome
-  welcome = Welcome.new
-  welcome.ask_name
-  welcome.game_logo
-  name = welcome.player_name
-  puts welcome.display_message(name)
-  return name
-end
+# def start_welcome
+#   welcome = Welcome.new
+#   welcome.ask_name
+#   welcome.game_logo
+#   name = welcome.player_name
+#   puts welcome.display_message(name)
+#   return name
+# end
 
 
 
