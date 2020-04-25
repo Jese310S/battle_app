@@ -40,6 +40,11 @@ class Welcome
       prompt.yes?('Would you like to start the game?')
     end
 
+    def exit_game(answer)
+      pastel = Pastel.new
+      answer ? (puts pastel.green.bold("Great, let's continue.")) : exit
+    end
+
 end
 
 

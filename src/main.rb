@@ -19,8 +19,10 @@ def start_game
     #TTY initialize for gems
     prompt = TTY::Prompt.new
     pastel = Pastel.new
-    #prints welcome message
-    puts welcome.display_message(name)
+    #prints welcome message and asks user to continue
+    player_answer = welcome.display_message(name)
+    # if yes game continues else exits games
+    welcome.exit_game(player_answer)
     puts `clear`
     #displays champion stats table and promt for user to choose champion
     player.add_table
@@ -30,7 +32,9 @@ def start_game
     dragon.display_name
     dragon.display_stats
     # prompt user if ready for battle
-    prompt.yes?('Ready for battle?')
+    prompt_answer = prompt.yes?('Ready for battle?')
+    # if yes game continues else exits game
+    welcome.exit_game(prompt_answer)
     puts `clear`
 #loop for battle turn sequence between player and boss
         x=0
