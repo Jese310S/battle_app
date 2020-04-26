@@ -1,15 +1,38 @@
 # Battle App
-Terminal App assignment from coder academy. 
+This Terminal App was and assignment for coder academy. Battle App is a RPG style game.  After opening the terminal and starting the app the player will be asked to provide their username.  Once they are ready to play the player will choose a champion to battle with.  Next the user encounters the games boss.  Once ready the boss and player take turn in attacking. The winner is determined by whomever is left standing after the attack.
+
 (https://github.com/Jese310S/battle_app)
 
 ## Purpose and Target Audience
 This app is meant to bring some enjoyment to anyone with access to a terminal.
 
-## Current User Story
+## Getting Started
 
-Battle App is a RPG style game.  After opening the terminal and starting the app the player will be asked to provide their username.  Once they are ready to play the player will choose a champion to battle with.  Next the user encounters the games boss.  Once ready the boss and player take turn in attacking. The winner is determined by whomever is left standing after the attack.
+### Instructions for Installation and Use
 
-## Original User Story
+1. You will need ruby installed on your computer. [Download ruby here](https://www.ruby-lang.org/en/).
+2. You will also need the Bundler gem installed. It comes with the main ruby installation, but if you do not have it on your machine, you can install it with the following command:
+
+`gem install bundler`
+
+3. Fork or clone this repository down to your local computer [App clone Link](https://github.com/Jese310S/battle_app.git).
+4. To install the gem(s) required, navigate to the location of the `/src` folder in repostitory on your computer, and use the command:
+
+`bundle`
+
+5. Run the app with:
+
+`ruby main.rb`
+
+## Running the Tests
+
+From `/src` folder in repository on your computer, use the command:
+
+`rspec tests.rb`
+
+
+
+## Original App Idea
 
 The Original idea for the game was to have the user choose a level they would like to play and that would increase the difficulty.  the user would then choose their army instead of a champion.  The choice of army would determine the useres attack level.  I quickly realised that these features although nice were not necessary for the moment and were going to stop me from producing a quality outcome fo the project withing the week.  I then decided to change the user story wich allowed me to focus on producing a working app.  These features were added to the future features list.
 
@@ -21,7 +44,7 @@ The Original idea for the game was to have the user choose a level they would li
 ![](./docs/gifs/Win_screen.gif)
 
 
-## Features
+## Current Features
 
 
 | Feature | Description | Expected Outcome | Actual Outcome | Is it a poroblem? |
@@ -41,22 +64,6 @@ The Original idea for the game was to have the user choose a level they would li
 ## User Flow 
 ![](./docs/gifs/user_flow.png)
 
-
-### Instructions for Installation and Use
-
-1. You will need ruby installed on your computer. [Download ruby here](https://www.ruby-lang.org/en/).
-2. You will also need the Bundler gem installed. It comes with the main ruby installation, but if you do not have it on your machine, you can install it with the following command:
-
-`gem install bundler`
-
-3. Fork or clone this repository down to your local computer [App clone Link](https://github.com/Jese310S/battle_app.git).
-4. To install the gem(s) required, navigate to the location of the `/src` folder in repostitory on your computer, and use the command:
-
-`bundle`
-
-5. Run the app with:
-
-`ruby main.rb`
 
 ## Project Management
 
