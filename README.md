@@ -2,25 +2,26 @@
 Terminal App assignment from coder academy. 
 (https://github.com/Jese310S/battle_app)
 
+## Purpose and Target Audience
+This app is meant to bring some enjoyment to anyone with access to a terminal.
 
-
-### Current User Story
+## Current User Story
 
 Battle App is a RPG style game.  After opening the terminal and starting the app the player will be asked to provide their username.  Once they are ready to play the player will choose a champion to battle with.  Next the user encounters the games boss.  Once ready the boss and player take turn in attacking. The winner is determined by whomever is left standing after the attack.
 
-### Original User Story
+## Original User Story
 
 The Original idea for the game was to have the user choose a level they would like to play and that would increase the difficulty.  the user would then choose their army instead of a champion.  The choice of army would determine the useres attack level.  I quickly realised that these features although nice were not necessary for the moment and were going to stop me from producing a quality outcome fo the project withing the week.  I then decided to change the user story wich allowed me to focus on producing a working app.  These features were added to the future features list.
 
-# Game Screens
+## Game Screens
 
-![](./docs/welcome.gif)
-![](./docs/hit.gif)
-![](./docs/choose_champ.gif)
-![](./docs/Win_screen.gif)
+![](./docs/gifs/welcome_screen.gif)
+![](./docs/gifs/hit.gif)
+![](./docs/gifs/choose_champ.gif)
+![](./docs/gifs/Win_screen.gif)
 
 
-### Features
+## Features
 
 
 | Feature | Description | Expected Outcome | Actual Outcome | Is it a poroblem? |
@@ -37,8 +38,30 @@ The Original idea for the game was to have the user choose a level they would li
 | Win/Lose Screen | Display Win/Lose base on which character reaches zero health first | Stylised Win or Lose prints to screen when health is zero | As Expected | No
 | Restart Game | at the end of game, player can restart | player is prompted to restart and if yes game is restarted | As Expected | No
 
-### User Flow 
-![](./docs/user_flow.png)
+## User Flow 
+![](./docs/gifs/user_flow.png)
+
+
+### Instructions for Installation and Use
+
+1. You will need ruby installed on your computer. [Download ruby here](https://www.ruby-lang.org/en/).
+2. You will also need the Bundler gem installed. It comes with the main ruby installation, but if you do not have it on your machine, you can install it with the following command:
+
+`gem install bundler`
+
+3. Fork or clone this repository down to your local computer [Clone Link](https://github.com/Jese310S/battle_app.git).
+4. To install the gem(s) required, navigate to the location of the `/src` folder in repostitory on your computer, and use the command:
+
+`bundle`
+
+5. Run the app with:
+
+`ruby main.rb`
+
+![](./docs/gifs/clone.png)
+![](./docs/gifs/src_cd.png)
+![](./docs/gifs/bundle.png)
+![](./docs/gifs/run.png)
 
 
 
@@ -53,7 +76,8 @@ The Original idea for the game was to have the user choose a level they would li
 
 
 
- 
+
+
 
 
 
