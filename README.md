@@ -58,10 +58,8 @@ The Original idea for the game was to have the user choose a level they would li
 
 `ruby main.rb`
 
-![](./docs/gifs/clone.png)
-![](./docs/gifs/cd.png)
-![](./docs/gifs/bundle.png)
-![](./docs/gifs/run.png)
+
+lglgjgjgj
 
 
 
