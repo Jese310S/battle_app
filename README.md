@@ -62,7 +62,7 @@ The original idea for the game was to have the user choose a level they would li
 | Restart Game | at the end of game, player can restart | player is prompted to restart and if yes game is restarted | As expected
 
 ## User Flow 
-![](./docs/gifs/graph.png)
+![](./docs/gifs/flow_chart.png)
 
 
 ## Project Management
