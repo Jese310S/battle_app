@@ -27,10 +27,20 @@ The Original idea for the game was to have the user choose a level they would li
 | Win/Lose Screen | Display Win/Lose base on which character reaches zero health first | Stylised Win or Lose prints to screen when health is zero | As Expected | No
 | Restart Game | at the end of game, player can restart | player is prompted to restart and if yes game is restarted | As Expected | No
 
-
+### User Flow 
+(./docs/user_flow.png)
 ### Game Screens
 
-![Terminal App](./docs/welcome_screen.gif)
+![Game Screens](./docs/welcome_screen.gif)
+(./docs/hit_screen.gif)
+(./docs/choose_champion.gif)
+(./docs/congrats_screen.gif)
+
+
+
+
+
+
 
 
 
