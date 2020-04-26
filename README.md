@@ -30,11 +30,11 @@ The Original idea for the game was to have the user choose a level they would li
 ### User Flow 
 ![](./docs/user_flow.png)
 ### Game Screens
-
-![Game Screens](./docs/welcome_screen.gif)
-![](./docs/hit_screen.gif)
-![](./docs/choose_champion.gif)
-![](./docs/congrats_screen.gif)
+Ga
+![Game Screens](./docs/welcome.gif)
+![](./docs/hit.gif)
+![](./docs/choose_champ.gif)
+![](./docs/Win_screen.gif)
 
 
 
