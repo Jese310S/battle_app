@@ -49,7 +49,7 @@ The Original idea for the game was to have the user choose a level they would li
 
 `gem install bundler`
 
-3. Fork or clone this repository down to your local computer [Clone Link](https://github.com/Jese310S/battle_app.git).
+3. Fork or clone this repository down to your local computer [App clone Link](https://github.com/Jese310S/battle_app.git).
 4. To install the gem(s) required, navigate to the location of the `/src` folder in repostitory on your computer, and use the command:
 
 `bundle`
@@ -59,7 +59,7 @@ The Original idea for the game was to have the user choose a level they would li
 `ruby main.rb`
 
 ![](./docs/gifs/clone.png)
-![](./docs/gifs/src_cd.png)
+![](./docs/gifs/cd.png)
 ![](./docs/gifs/bundle.png)
 ![](./docs/gifs/run.png)
 
