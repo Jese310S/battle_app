@@ -7,22 +7,23 @@ Terminal App assignment from coder academy.
 
 ### Current User Story
 Battle App is a RPG style game. After starting the app in the terminal, the user is prompted to create a username and then the game begins.
+
 ![](./docs/welcome.gif)
 
 The player chooses their champion for battle.
+
 ![](./docs/choose_champ.gif)
 
+ Next the user encounters the games boss. 
 
- First to zero health wins the day. 
- ![](./docs/hit.gif)
-
- Next the user encounters the games boss.  
 ![](./docs/hit.gif)
- 
- Once ready the boss and player take turns attacking.  
+
+ Once ready the boss and player take turns attacking. 
+
  ![](./docs/hit.gif)
 
- First to zero health wins the day. 
+ First to zero health wins the day.
+ 
  ![](./docs/Win_screen.gif)
 
 ### Original User Story
