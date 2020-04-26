@@ -58,9 +58,14 @@ The Original idea for the game was to have the user choose a level they would li
 
 `ruby main.rb`
 
+## Project Management
 
-lglgjgjgj
+I used Trello to organise and keep track of what I was working on and what would still need to be done to finish the app and documentation requirements.
 
+
+![](./docs/trello/trello_1.png)
+![](./docs/trello/trello_4.png)
+![](./docs/trello/trello_7.png)
 
 
 
