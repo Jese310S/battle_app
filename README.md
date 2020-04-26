@@ -28,7 +28,7 @@ The Original idea for the game was to have the user choose a level they would li
 | Restart Game | at the end of game, player can restart | player is prompted to restart and if yes game is restarted | As Expected | No
 
 ### User Flow 
-(./docs/user_flow.png)
+![](./docs/user_flow.png)
 ### Game Screens
 
 ![Game Screens](./docs/welcome_screen.gif)
