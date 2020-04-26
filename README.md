@@ -67,7 +67,7 @@ The original idea for the game was to have the user choose a level they would li
 
 ## Project Management
 
-I used Trello to organise and keep track of what I was working on and what would still need to be done to finish the app and documentation requirements.
+I used Trello to organise and keep track of what I was working on. Trello helped me visualise what still needed to be completed by my set timeline.
 
 
 ![](./docs/trello/trello_1.png)
