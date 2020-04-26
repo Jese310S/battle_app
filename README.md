@@ -2,10 +2,28 @@
 Terminal App assignment from coder academy. 
 (https://github.com/Jese310S/battle_app)
 
-### Current User Story
-Battle App is a RPG style game.  The player chooses a champion for battle and fights the boss. First to zero health wins the day. 
 
-After opening the terminal and starting the app the player will be asked to provide their username.  Once they are ready to play the player will choose a champion to battle with.  Next the user encounters the games boss.  Once ready the boss and player take turn in attacking. The winner is determined by whomever is left standing after the attack.
+
+
+### Current User Story
+Battle App is a RPG style game. After starting the app in the terminal, the user is prompted to create a username and then the game begins.
+![](./docs/welcome.gif)
+
+The player chooses their champion for battle.
+![](./docs/choose_champ.gif)
+
+
+ First to zero health wins the day. 
+ ![](./docs/hit.gif)
+
+ Next the user encounters the games boss.  
+![](./docs/hit.gif)
+ 
+ Once ready the boss and player take turns attacking.  
+ ![](./docs/hit.gif)
+
+ First to zero health wins the day. 
+ ![](./docs/Win_screen.gif)
 
 ### Original User Story
 The Original idea for the game was to have the user choose a level they would like to play and that would increase the difficulty.  the user would then choose their army instead of a champion.  The choice of army would determine the useres attack level.  I quickly realised that these features although nice were not necessary for the moment and were going to stop me from producing a quality outcome fo the project withing the week.  I then decided to change the user story wich allowed me to focus on producing a working app.  These features were added to the future features list.
@@ -30,8 +48,8 @@ The Original idea for the game was to have the user choose a level they would li
 ### User Flow 
 ![](./docs/user_flow.png)
 ### Game Screens
-Ga
-![Game Screens](./docs/welcome.gif)
+
+![](./docs/welcome.gif)
 ![](./docs/hit.gif)
 ![](./docs/choose_champ.gif)
 ![](./docs/Win_screen.gif)
