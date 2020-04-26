@@ -10,12 +10,12 @@ This app is meant to bring some enjoyment to anyone with access to a terminal.
 
 ### Instructions for Installation and Use
 
-1. You will need ruby installed on your computer. [Download ruby here](https://www.ruby-lang.org/en/).
+1. You will need ruby installed on your computer. [Download Ruby Here](https://www.ruby-lang.org/en/).
 2. You will also need the Bundler gem installed. It comes with the main ruby installation, but if you do not have it on your machine, you can install it with the following command:
 
 `gem install bundler`
 
-3. Fork or clone this repository down to your local computer [App clone Link](https://github.com/Jese310S/battle_app.git).
+3. Fork or clone this repository down to your local computer [Clone App Here](https://github.com/Jese310S/battle_app.git).
 4. To install the gem(s) required, navigate to the location of the `/src` folder in repostitory on your computer, and use the command:
 
 `bundle`
