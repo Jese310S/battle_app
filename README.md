@@ -42,7 +42,7 @@ An original idea for the game was to have the user choose a level they would lik
 
 ## Testing
 
-I used the ruby gem RSPEC to write the apps tests. [RSPEC]("https://rubygems.org/gems/rspec")
+I used the ruby gem RSPEC to write the apps tests. [RSPEC](https://rubygems.org/gems/rspec)
 
 
 | Expected Action | Test | Actual Outcome |
