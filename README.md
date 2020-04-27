@@ -6,7 +6,7 @@
 
 ## Game Motivation and Description
 
-This Terminal App was an assignment for Coder Academy.  For the assignment the first thing that came to mind was to build a game.  I knew I would enjoy creating the visual style of a terminal game, while utilising classes and other ruby development tools we learned.  I took inspiration from a couple of games, the first being Diablo and the second is Clash of Clans.  I liked the idea of a fighting game with a mid-evil theme.
+This Terminal App was an assignment for Coder Academy.  For the assignment the first thing that came to mind was to build a game.  I knew I would enjoy creating the visual style of a terminal game, while utilising classes and other ruby development tools we learned.  I took inspiration from a couple of games, the first being Diablo and the second is Clash of Clans.  I liked the idea of a fighting game with a midievil theme.
 
 Battle Wars is an RPG inspired turn based, attack style game.  After opening the terminal and starting the app the user will be asked to provide their username.  Once they are ready to play, the user will choose a champion for battle.  Next the user encounters the game boss.  Once ready the boss and user will take turns attacking. The winner is determined based on health points (HP). Whomever is left standing after their opponent has 0-HP wins the game.  
 
@@ -55,6 +55,16 @@ I used the ruby gem RSPEC to write the apps tests. [RSPEC](https://rubygems.org/
 | Return a float for the progress bar to run and display current health | should calculate the lost health and convert it to a float | As Expected
 | Win screen is activated when the boss's health is zero | should return true if boss HP is = 0 | As Expected
 
+
+## Gems Used
+
+* [tty-font](https://github.com/piotrmurach/tty-font) - Write text in large stylised characters
+* [tty-progressbar](https://github.com/piotrmurach/tty-progressbar) - A flexible progress bars drawing in terminal emulators
+* [pastel](https://github.com/piotrmurach/pastel) - Terminal strings styling with intuitive and clean API
+* [tty-prompt](https://github.com/piotrmurach/tty-prompt) - Interactive command line prompt
+*  [tty-cursor](https://github.com/piotrmurach/tty-cursor) - Move terminal cursor around
+*  [terminal-table](https://rubygems.org/gems/terminal-table/versions/1.8.0) - Ascii table generation library
+* [rspec](https://rspec.info/documentation/) - Testing tool for behavior-driven development
 
 ## Game Screens
 
