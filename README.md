@@ -16,13 +16,12 @@ This app is meant to bring some enjoyment to anyone with access to a terminal.
 `gem install bundler`
 
 3. Fork or clone this repository down to your local computer [Clone App Here](https://github.com/Jese310S/battle_app.git).
-4. To install the gem(s) required, navigate to the location of the `/src` folder in repostitory on your computer, and use the command:
 
-`bundle`
+4. To finish use the command:
 
-5. Run the app with:
+`bash run.sh`
 
-`ruby main.rb`
+5. once prompted enter a chosen user name and enjoy the game.
 
 ## Running the Tests
 
