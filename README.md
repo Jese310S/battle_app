@@ -1,4 +1,4 @@
-# Battle App
+# Battle Wars
 
 (https://github.com/Jese310S/battle_app)
 
@@ -6,20 +6,17 @@
 
 ## Game Motivation and Description
 
-This Terminal App was an assignment for Coder Academy.  For the assignment the first thing that came to mind was a game.  I knew I would enjoy creating the visual style of a terminal while practice utilising classes in ruby.  I took inspiration from a couple of games, the first being diablo and the second is clash of clans.  I liked the idea of a fighting game with a midevil theme.
+This Terminal App was an assignment for Coder Academy.  For the assignment the first thing that came to mind was a game.  I knew I would enjoy creating the visual style of a terminal game, while practice utilising classes and other ruby development tools we learned.  I took inspiration from a couple of games, the first being diablo and the second is clash of clans.  I liked the idea of a fighting game with a mid-evil theme.
 
-Battle App is an RPG inspired turn based attack style game.  After opening the terminal and starting the app the player will be asked to provide their username.  Once they are ready to play the player will choose a champion to battle with.  Next the user encounters the game's boss.  Once ready the boss and player will take turns in attacking. The winner is determined based on hit points (HP) and whomever is left standing after their opponent has 0HP wins.  
+Battle Wars is an RPG inspired turn based, attack style game.  After opening the terminal and starting the app the user will be asked to provide their username.  Once they are ready to play, the user will choose a champion for battle.  Next the user encounters the game boss.  Once ready the boss and user will take turns attacking. The winner is determined based on health points (HP). Whomever is left standing after their opponent has 0HP wins the game.  
 
 In the game the user is able to choose a champion, battle their enemy, Start New Game, or Exit
 
-My target audience is anyone with access to a terminal.  The app is meant to bring some enjoyment.  I want the user to be able to stop what they are working on and take a mental break.  Many times all that is needed is a battle with a dragon to reenergise and finish the project.
-
 ## Purpose and Scope
 
-My target audience is anyone with access to a terminal.  The app is meant to bring some enjoyment.  I want the user to be able to stop what they are working on and take a mental break.  Many times all that is needed is a battle with a dragon to reenergise and finish the project.
+My target audience is anyone with access to a terminal.  The app is meant to bring some enjoyment to a busy working day.  I want the user to be able to stop what they are working on and take a mental break.  Many times all that is needed is a battle with a dragon to reenergise and finish a project.
 
-The Original idea for the game was to have the user choose a level they would like to play and that would increase the difficulty.  The user would then choose their army instead of a champion.  The choice of army would determine the useres attack level.  I quickly realised that these features, although nice were out of my scope for the moment and were going to stop me from producing a quality outcome withing the week.  I then decided to change the user interactions without affecting the story. This allowed me to focus on producing a working app.  These features were added to the future features list.
-
+An original idea for the game was to have the user choose a level they would like to play. This would increase the difficulty by changin the HP of the boss.  The user would then choose their army instead of a champion.  The choice of army would determine the useres attack level.  I quickly realised that these features, although nice were out of my scope for the moment.  If I spent too much time trying to implement these I would not have a quality outcome withing the week.  I then decided to change the user interactions without affecting the story. This allowed me to focus on producing a working app but still have the user interaction I wanted.  The out of scope features were added to the future features list.
 
 
 
@@ -27,13 +24,36 @@ The Original idea for the game was to have the user choose a level they would li
 
 
 | Feature | Description | User Experience |
-| ------ | ------ | ------- | ------ |
+| ------ | ------ | ------- | 
 | Username screen  | User will enter a chosen name to be used in the game | Prompt user for username
 | Welcome Screen | Displays game logo and asks the user if they are ready to play | The title of the game in a stylised font prints to the screen with a description of the game. A yes/no prompt asks if they are ready to begin 
 | Select Champion | User is given options and then chooses their champion | A table prints to screen with a description of the champions. User is then  prompted to select their champion.
 | Attack Sequence | Player and boss take turns attacking each other | User is individually prompted to prepare for attack and to attack with each turn. A message and progress bar appear after each.  The message describes the result of the attack and the progress bar show the remaining HP percentage. 
 | Win/Lose Screen | Display Win/Lose based on which character reaches zero health first | A Stylised Win or Lose screen prints to screen.
 | Restart Game | At the end of the game, the user can restart or exit. | The user is prompted and asked if they would like to restart or exit and if yes game is restarted and they enter a new username.
+
+## Aspirational Features
+| Feature | Description |
+| ------ | ------ |
+|Difficulty levels | The user will choose from multiple bosses which would change the difficulty(higher HP)
+|Army Choice | The user will choose multiple warriors to determine their attack strength
+
+
+
+## Testing
+
+I used the ruby gem RSPEC to write the apps tests.
+
+
+| Expected Action | Test | Actual Outcome |
+| ------ | ------ | ------- |
+| Welcome.new creates a new object  | should return true | As Expected
+| Prompt username and store in player_name | should return "jess" if provided jess | As Expected
+| Player.new creates a player object | should return true | As Expected.
+| Prompt to choose champion and store in champion variable | should return "Wizard" if Wizard is chosen| As Expected
+| Damage is deducted from the players hp | should return the result of hp - the players damage stat| As Expected
+| return a float for the progress bar to diplay current health | should calculate the lost health and convert to float | As Expected
+| Win screen is activated when boss health is zero | should return true if boss HP is at 0 | As Expected
 
 
 ## Game Screens
@@ -49,9 +69,8 @@ The Original idea for the game was to have the user choose a level they would li
 
 
 ## Project Management
-
+[App Trello Board](https://www.ruby-lang.org/en/)
 I used Trello to organise and keep track of what I was working on. Trello helped me visualise what still needed to be completed by my set timeline.
-
 
 ![](./docs/trello/trello_1.png)
 ![](./docs/trello/trello_4.png)

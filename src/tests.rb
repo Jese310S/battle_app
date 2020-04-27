@@ -71,7 +71,21 @@ end
         player = Player.new("jess")
         expect(player.lost_health_test(50  )).to eq(0.5)
        end
+
+
+       it "will return true for player win" do
+        player = Player.new("jess")
+        draco = Boss.new("Draco")
+        draco.hp = 0
+        expect(player.wins(draco)).to eq(true)
+       end
+
+
+
+
     end
+
+
 
 
 
